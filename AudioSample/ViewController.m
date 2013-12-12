@@ -13,19 +13,24 @@
 @interface ViewController ()
 {
     AVAudioPlayer *SEplayer;
+    AVAudioPlayer *BGMplayer;
 }
 @property (nonatomic, retain) AVAudioPlayer *SEplayer;
+@property (nonatomic, retain) AVAudioPlayer *BGMplayer;
 - (IBAction)playSE:(id)sender;
+- (IBAction)playBGM:(id)sender;
+- (IBAction)pauseBGM:(id)sender;
+- (IBAction)stopBGM:(id)sender;
 @end
 
 @implementation ViewController
 @synthesize SEplayer;
+@synthesize BGMplayer;
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
-    [super viewDidLoad];
     NSString *soundFilePath = [[NSBundle mainBundle] pathForResource: @"sampleSE" ofType: @"mp3"];
     
     NSURL *fileURL = [[NSURL alloc] initFileURLWithPath: soundFilePath];
@@ -34,6 +39,15 @@
     self.SEplayer = newPlayer;
     
     [SEplayer prepareToPlay];
+    
+    NSString *bgmFilePath = [[NSBundle mainBundle] pathForResource: @"BGMsample" ofType: @"mp3"];
+    NSURL *bgmFileURL = [[NSURL alloc] initFileURLWithPath: bgmFilePath];
+
+    AVAudioPlayer *newBGMPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL: bgmFileURL error: nil];
+    self.BGMplayer = newBGMPlayer;
+    
+    [BGMplayer prepareToPlay];
+    
 }
 
 - (void)didReceiveMemoryWarning
@@ -47,4 +61,22 @@
     [SEplayer play];
 }
 
+//BGMを再生するボタン
+- (IBAction)playBGM:(id)sender{
+    [BGMplayer play];
+}
+
+//BGMを再開するボタン
+- (IBAction)pauseBGM:(id)sender{
+    [BGMplayer pause];
+}
+
+//BGMを一時停止するボタン
+- (IBAction)stopBGM:(id)sender{
+    [BGMplayer stop];
+    BGMplayer.currentTime = 0;
+    [BGMplayer prepareToPlay];
+}
+
 @end
+

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		AF1C38251858CB5F0032328E /* sampleSE.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AF1C38241858CB5F0032328E /* sampleSE.mp3 */; };
+		AF1C38271858E2180032328E /* BGMsample.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AF1C38261858E2180032328E /* BGMsample.mp3 */; };
 		AFE747A51857F30400B77C19 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFE747A41857F30400B77C19 /* Foundation.framework */; };
 		AFE747A71857F30400B77C19 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFE747A61857F30400B77C19 /* CoreGraphics.framework */; };
 		AFE747A91857F30400B77C19 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFE747A81857F30400B77C19 /* UIKit.framework */; };
@@ -36,6 +37,7 @@
 
 /* Begin PBXFileReference section */
 		AF1C38241858CB5F0032328E /* sampleSE.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = sampleSE.mp3; sourceTree = "<group>"; };
+		AF1C38261858E2180032328E /* BGMsample.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = BGMsample.mp3; sourceTree = "<group>"; };
 		AFE747A11857F30400B77C19 /* AudioSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AudioSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFE747A41857F30400B77C19 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		AFE747A61857F30400B77C19 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -128,6 +130,7 @@
 		AFE747AB1857F30400B77C19 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				AF1C38261858E2180032328E /* BGMsample.mp3 */,
 				AF1C38241858CB5F0032328E /* sampleSE.mp3 */,
 				AFE747AC1857F30400B77C19 /* AudioSample-Info.plist */,
 				AFE747AD1857F30400B77C19 /* InfoPlist.strings */,
@@ -231,6 +234,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AF1C38271858E2180032328E /* BGMsample.mp3 in Resources */,
 				AFE747BD1857F30400B77C19 /* Images.xcassets in Resources */,
 				AFE747AF1857F30400B77C19 /* InfoPlist.strings in Resources */,
 				AF1C38251858CB5F0032328E /* sampleSE.mp3 in Resources */,
